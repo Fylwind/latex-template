@@ -1,31 +1,11 @@
-% Bold symbols package (note: may overload the number of math alphabets)
-% (!) Must load *after* the fonts!
-\newcommand{\hmmax}{0}
-\newcommand{\bmmax}{2}
-\usepackage{bm}
-
 % Set height of header
 \setlength{\headheight}{15pt}
 
 \usepackage[includeheadfoot]{geometry}
 \pagestyle{fancy}
-\usetikzlibrary{calc, shapes}
-
-% Allow large matrices
-\setcounter{MaxMatrixCols}{50}
-
-% Numbering
-\numberwithin{equation}{section}
-\renewcommand{\theequation}{\textsf{\footnotesize
-    \ensuremath{\diamond}\arabic{equation}}}
-
-% Fix the spacing bug with delimiters
-\let\originalleft\left
-\let\originalright\right
-\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
-\renewcommand{\right}{\aftergroup\egroup\originalright}
 
 % ---------------------------------------------------------------------------
 
+\input{template.basic}
 \input{template.envs}
 \input{template.symbols}
