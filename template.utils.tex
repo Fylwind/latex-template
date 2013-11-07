@@ -1,0 +1,6 @@
+\newcommand{\PrintMathFonts}{%
+  \count255=0
+  \loop\ifnum\count255<16
+    (\the\count255:~\fontname\textfont\count255)
+    \advance\count255 by 1
+ \repeat}
