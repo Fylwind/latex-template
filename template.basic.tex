@@ -4,18 +4,6 @@
 \newcommand{\bmmax}{2}
 \usepackage{bm}
 
-\usetikzlibrary{calc, shapes}
-
-% Allow large matrices
-\setcounter{MaxMatrixCols}{50}
-
-% Numbering
-\numberwithin{equation}{section}
-\renewcommand{\theequation}{\textsf{\footnotesize
-    \ensuremath{\diamond}\arabic{equation}}}
-
-% Fix the spacing bug with delimiters
-\let\originalleft\left
-\let\originalright\right
-\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
-\renewcommand{\right}{\aftergroup\egroup\originalright}
+\input{template.libs}
+\input{template.numbering}
+\input{template.fixes}

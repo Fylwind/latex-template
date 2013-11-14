@@ -1,0 +1,8 @@
+% Allow large matrices
+\setcounter{MaxMatrixCols}{50}
+
+% Fix the spacing bug with delimiters
+\let\originalleft\left
+\let\originalright\right
+\renewcommand{\left}{\mathopen{}\mathclose\bgroup\originalleft}
+\renewcommand{\right}{\aftergroup\egroup\originalright}
